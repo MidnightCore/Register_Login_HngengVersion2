@@ -36,7 +36,7 @@ class _SignupPageState extends State<SignupPage> {
                           style: TextStyle(
                               fontSize: 80.0,
                               fontWeight: FontWeight.bold,
-                              color: Colors.pink),
+                              color: Colors.amber),
                         ),
                       )
                     ],
@@ -116,12 +116,12 @@ class _SignupPageState extends State<SignupPage> {
                           },
                         ),
                         SizedBox(height: 50.0),
-                        Container(
+                          Container(
                             height: 40.0,
                             child: Material(
                               borderRadius: BorderRadius.circular(20.0),
-                              shadowColor: Colors.pinkAccent,
-                              color: Colors.pink,
+                              shadowColor: Colors.amberAccent,
+                              color: Colors.amber,
                               elevation: 7.0,
                               child: GestureDetector(
                                 onTap: () {
