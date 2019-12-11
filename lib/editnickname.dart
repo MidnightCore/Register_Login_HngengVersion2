@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'profile.dart';
+import 'game_page.dart';
 
 class EditnicknamePage extends StatefulWidget {
   @override
@@ -13,7 +14,7 @@ class _EditnicknamePageState extends State<EditnicknamePage> {
         body: new Stack(
       children: <Widget>[
         ClipPath(
-          child: Container(color: Colors.black.withOpacity(0.8)),
+          child: Container(color: Colors.teal[700].withOpacity(0.8)),
           clipper: getClipper(),
         ),
         Positioned(
@@ -60,7 +61,7 @@ class _EditnicknamePageState extends State<EditnicknamePage> {
                   child: Container(
                     decoration: BoxDecoration(
                         border: Border.all(
-                            color: Colors.black,
+                            color: Colors.teal[700],
                             style: BorderStyle.solid,
                             width: 1.0),
                         color: Colors.transparent,
@@ -83,6 +84,7 @@ class _EditnicknamePageState extends State<EditnicknamePage> {
                   ),
                 ),
                 SizedBox(height: 25.0),
+                
                 Container(
                   height: 45.0,
                   width: 300.0,
@@ -90,7 +92,7 @@ class _EditnicknamePageState extends State<EditnicknamePage> {
                   child: Container(
                     decoration: BoxDecoration(
                         border: Border.all(
-                            color: Colors.black,
+                            color: Colors.teal[700],
                             style: BorderStyle.solid,
                             width: 1.0),
                         color: Colors.transparent,

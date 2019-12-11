@@ -5,7 +5,6 @@ class ItemBag extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final title = 'Item Bag';
-
     return MaterialApp(
       title: title,
       home: Scaffold(
@@ -17,7 +16,7 @@ class ItemBag extends StatelessWidget {
           // horizontal, this produces 2 rows.
           crossAxisCount: 3,
           // Generate 100 widgets that display their index in the List.
-          children: List.generate(15, (index) {
+          children: List.generate(14, (index) {
             return Center(
               child: Text(
                 'Item $index',

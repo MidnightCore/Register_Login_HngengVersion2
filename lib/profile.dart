@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'game_page.dart';
 import 'welcome.dart';
 import 'editnickname.dart';
 import 'itembag.dart';
@@ -15,7 +16,7 @@ class _ProfilePageState extends State<ProfilePage> {
         body: new Stack(
       children: <Widget>[
         ClipPath(
-          child: Container(color: Colors.black.withOpacity(0.8)),
+          child: Container(color: Colors.lightGreenAccent[400].withOpacity(0.8)),
           clipper: getClipper(),
         ),
         Positioned(
@@ -34,7 +35,7 @@ class _ProfilePageState extends State<ProfilePage> {
                             fit: BoxFit.cover),
                         borderRadius: BorderRadius.all(Radius.circular(80.0)),
                         boxShadow: [
-                          BoxShadow(blurRadius: 7.0, color: Colors.black)
+                          BoxShadow(blurRadius: 7.0, color: Colors.lightGreen[900])
                         ])),
                 SizedBox(height: 40.0),
                 Text(
@@ -68,7 +69,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   child: Container(
                     decoration: BoxDecoration(
                         border: Border.all(
-                            color: Colors.black,
+                            color: Colors.lightGreen[900],
                             style: BorderStyle.solid,
                             width: 1.0),
                         color: Colors.transparent,
@@ -79,10 +80,10 @@ class _ProfilePageState extends State<ProfilePage> {
                             context,
                             MaterialPageRoute(
                                 builder: (BuildContext context) =>
-                                    ItemBag()));
+                                    GamePage()));
                       },
                       child: Center(
-                        child: Text('Item Bag',
+                        child: Text('Game Page',
                             style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 fontFamily: 'Montserrat')),
@@ -98,7 +99,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   child: Container(
                     decoration: BoxDecoration(
                         border: Border.all(
-                            color: Colors.black,
+                            color: Colors.lightGreen[900],
                             style: BorderStyle.solid,
                             width: 1.0),
                         color: Colors.transparent,
@@ -128,7 +129,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   child: Container(
                     decoration: BoxDecoration(
                         border: Border.all(
-                            color: Colors.black,
+                            color: Colors.lightGreen[900],
                             style: BorderStyle.solid,
                             width: 1.0),
                         color: Colors.transparent,

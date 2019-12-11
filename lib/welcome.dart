@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'game_page.dart';
 import 'profile.dart';
 
 class WelcomePage extends StatefulWidget {
@@ -92,7 +93,7 @@ class _WelcomePageState extends State<WelcomePage> {
                                       context,
                                       MaterialPageRoute(
                                           builder: (BuildContext context) =>
-                                              ProfilePage()));
+                                              GamePage()));
                                 },
                                 child: Center(
                                   child: Text(
