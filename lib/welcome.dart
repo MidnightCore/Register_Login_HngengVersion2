@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'profile.dart';
 
 class WelcomePage extends StatefulWidget {
   @override
@@ -77,9 +78,8 @@ class _WelcomePageState extends State<WelcomePage> {
                         EdgeInsets.only(top: 35.0, left: 20.0, right: 20.0),
                     child: Column(
                       children: <Widget>[
-                        
                         SizedBox(height: 70.0),
-                          Container(
+                        Container(
                             height: 60.0,
                             child: Material(
                               borderRadius: BorderRadius.circular(20.0),
@@ -88,7 +88,11 @@ class _WelcomePageState extends State<WelcomePage> {
                               elevation: 7.0,
                               child: GestureDetector(
                                 onTap: () {
-                                  
+                                  Navigator.pushReplacement(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (BuildContext context) =>
+                                              ProfilePage()));
                                 },
                                 child: Center(
                                   child: Text(
