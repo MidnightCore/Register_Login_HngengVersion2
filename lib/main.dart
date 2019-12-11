@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'signup.dart';
+import 'welcome.dart';
 
 void main() => runApp(new MyApp());
 
@@ -9,7 +10,8 @@ class MyApp extends StatelessWidget {
     return new MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: <String, WidgetBuilder>{
-        '/signup': (BuildContext context) => new SignupPage()
+        '/signup' : (BuildContext context) => new SignupPage(),
+        '/welcome': (BuildContext context) => new WelcomePage()
       },
       home: new MyHomePage(),
     );
@@ -22,6 +24,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -59,7 +62,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 padding: EdgeInsets.only(top: 35.0, left: 20.0, right: 20.0),
                 child: Column(
                   children: <Widget>[
-                    TextField(
+                    TextFormField(
                       keyboardType: TextInputType.emailAddress,
                       decoration: InputDecoration(
                           labelText: 'SSRU EMAIL',
@@ -71,7 +74,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               borderSide: BorderSide(color: Colors.green))),
                     ),
                     SizedBox(height: 20.0),
-                    TextField(
+                    TextFormField(
                       decoration: InputDecoration(
                           labelText: 'PASSWORD',
                           labelStyle: TextStyle(
@@ -83,6 +86,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       obscureText: true,
                     ),
                     SizedBox(height: 40.0),
+
                     Container(
                       height: 40.0,
                       child: Material(
@@ -91,7 +95,8 @@ class _MyHomePageState extends State<MyHomePage> {
                         color: Colors.cyan,
                         elevation: 7.0,
                         child: GestureDetector(
-                          onTap: () {                           
+                          onTap: () {
+                            Navigator.of(context).pushNamed('/welcome');
                           },
                           child: Center(
                             child: Text(
@@ -124,7 +129,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   child: Text(
                     'Register',
                     style: TextStyle(
-                        color: Colors.pink,
+                        color: Colors.amber,
                         fontFamily: 'Montserrat',
                         fontWeight: FontWeight.bold,
                         decoration: TextDecoration.underline),
