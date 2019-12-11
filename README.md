@@ -1,7 +1,3 @@
-# Flutter Minimal UI
+## งานเกมอาจารย์โจ (รายวิชา java programming)(ปี 3 เทอม1)
 
-Login and Signup screens.
-
-## Design Credit - https://dribbble.com/shots/5239966-Daily-UI-001
-
-## How do I make this - https://youtu.be/PJU6HFWOM6I
+หน้าสมัครสมาชิก และ เข้าสู่ระบบ
