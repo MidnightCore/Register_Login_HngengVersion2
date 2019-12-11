@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
-import 'welcome.dart';
-import 'editnickname.dart';
-import 'itembag.dart';
+import 'profile.dart';
 
-class ProfilePage extends StatefulWidget {
+class EditnicknamePage extends StatefulWidget {
   @override
-  _ProfilePageState createState() => new _ProfilePageState();
+  _EditnicknamePageState createState() => new _EditnicknamePageState();
 }
 
-class _ProfilePageState extends State<ProfilePage> {
+class _EditnicknamePageState extends State<EditnicknamePage> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -23,44 +21,38 @@ class _ProfilePageState extends State<ProfilePage> {
             top: MediaQuery.of(context).size.height / 5,
             child: Column(
               children: <Widget>[
-                Container(
-                    width: 150.0,
-                    height: 150.0,
-                    decoration: BoxDecoration(
-                        color: Colors.red,
-                        image: DecorationImage(
-                            image: NetworkImage(
-                                'https://img.favpng.com/17/3/18/computer-icons-user-profile-male-png-favpng-ZmC9dDrp9x27KFnnge0jKWKBs.jpg'),
-                            fit: BoxFit.cover),
-                        borderRadius: BorderRadius.all(Radius.circular(80.0)),
-                        boxShadow: [
-                          BoxShadow(blurRadius: 7.0, color: Colors.black)
-                        ])),
                 SizedBox(height: 40.0),
                 Text(
-                  'John  Doe',
+                  'Edit Your Nickname',
                   style: TextStyle(
                       fontSize: 30.0,
                       fontWeight: FontWeight.bold,
                       fontFamily: 'Montserrat'),
                 ),
-                SizedBox(height: 15.0),
-                Text(
-                  'Suan Sunandha Rajabhat University',
-                  style: TextStyle(
-                      fontSize: 17.0,
-                      fontStyle: FontStyle.italic,
-                      fontFamily: 'Montserrat'),
-                ),
+                SizedBox(height: 20.0),
+                Container(
+                  width: 300.0,
+                    padding:
+                        EdgeInsets.only(top: 35.0, left: 20.0, right: 20.0),
+                    child: Column(
+                      children: <Widget>[
+                        TextFormField(
+                          keyboardType: TextInputType.text,
+                          decoration: InputDecoration(
+                              labelText: 'New Nickname',
+                              labelStyle: TextStyle(
+                                  fontFamily: 'Montserrat',
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.grey),
+                              focusedBorder: UnderlineInputBorder(
+                                  borderSide: BorderSide(color: Colors.green))),
+                        ),
+                      ],
+                    )),
+              
                 SizedBox(height: 10.0),
-                Text(
-                  'Student',
-                  style: TextStyle(
-                      fontSize: 17.0,
-                      fontStyle: FontStyle.italic,
-                      fontFamily: 'Montserrat'),
-                ),
-                SizedBox(height: 25.0),
+                
+                SizedBox(height: 80.0),
                 Container(
                   height: 45.0,
                   width: 300.0,
@@ -79,10 +71,10 @@ class _ProfilePageState extends State<ProfilePage> {
                             context,
                             MaterialPageRoute(
                                 builder: (BuildContext context) =>
-                                    ItemBag()));
+                                    ProfilePage()));
                       },
                       child: Center(
-                        child: Text('Item Bag',
+                        child: Text('Save Nickname',
                             style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 fontFamily: 'Montserrat')),
@@ -109,40 +101,10 @@ class _ProfilePageState extends State<ProfilePage> {
                             context,
                             MaterialPageRoute(
                                 builder: (BuildContext context) =>
-                                    EditnicknamePage()));
+                                    ProfilePage()));
                       },
                       child: Center(
-                        child: Text('Edit Nickname',
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontFamily: 'Montserrat')),
-                      ),
-                    ),
-                  ),
-                ),
-                SizedBox(height: 25.0),
-                Container(
-                  height: 45.0,
-                  width: 300.0,
-                  color: Colors.transparent,
-                  child: Container(
-                    decoration: BoxDecoration(
-                        border: Border.all(
-                            color: Colors.black,
-                            style: BorderStyle.solid,
-                            width: 1.0),
-                        color: Colors.transparent,
-                        borderRadius: BorderRadius.circular(20.0)),
-                    child: InkWell(
-                      onTap: () {
-                        Navigator.pushReplacement(
-                            context,
-                            MaterialPageRoute(
-                                builder: (BuildContext context) =>
-                                    WelcomePage()));
-                      },
-                      child: Center(
-                        child: Text('Go Back',
+                        child: Text('Back to Profile',
                             style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 fontFamily: 'Montserrat')),
