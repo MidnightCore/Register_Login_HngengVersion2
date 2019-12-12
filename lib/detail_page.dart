@@ -22,8 +22,8 @@ class DetailPage extends StatelessWidget {
           border: new Border.all(color: Colors.white),
           borderRadius: BorderRadius.circular(5.0)),
       child: new Text(
-        "\$" + lesson.price.toString(),
-        style: TextStyle(color: Colors.white),
+        "\฿" + lesson.price.toString(),
+        style: TextStyle(color: Colors.white, fontSize: 16.0),
       ),
     );
 
@@ -43,7 +43,7 @@ class DetailPage extends StatelessWidget {
         SizedBox(height: 10.0),
         Text(
           lesson.title,
-          style: TextStyle(color: Colors.white, fontSize: 45.0),
+          style: TextStyle(color: Colors.white, fontSize: 18.0),
         ),
         SizedBox(height: 30.0),
         Row(
@@ -56,7 +56,7 @@ class DetailPage extends StatelessWidget {
                     padding: EdgeInsets.only(left: 10.0),
                     child: Text(
                       lesson.level,
-                      style: TextStyle(color: Colors.white),
+                      style: TextStyle(color: Colors.white, fontSize: 16.0),
                     ))),
             Expanded(flex: 1, child: coursePrice)
           ],
@@ -66,15 +66,15 @@ class DetailPage extends StatelessWidget {
 
     final topContent = Stack(
       children: <Widget>[
-        Container(
-            padding: EdgeInsets.only(left: 10.0),
-            height: MediaQuery.of(context).size.height * 0.5,
-            decoration: new BoxDecoration(
-              image: new DecorationImage(
-                image: new AssetImage("drive-steering-wheel.jpg"),
-                fit: BoxFit.cover,
-              ),
-            )),
+        // Container(
+        //     padding: EdgeInsets.only(left: 10.0),
+        //     height: MediaQuery.of(context).size.height * 0.5,
+        //     decoration: new BoxDecoration(
+        //       image: new DecorationImage(
+        //         image: new AssetImage("/assets/drive-steering-wheel.jpg"),
+        //         fit: BoxFit.cover,
+        //       ),
+        //     )),
         Container(
           height: MediaQuery.of(context).size.height * 0.5,
           padding: EdgeInsets.all(40.0),
@@ -94,7 +94,7 @@ class DetailPage extends StatelessWidget {
                     MaterialPageRoute(
                         builder: (BuildContext context) => QuizPage()));
             },
-            child: Icon(Icons.arrow_back, color: Colors.white),
+            child: Icon(Icons.arrow_back_ios, color: Colors.white),
           ),
         )
       ],
@@ -102,8 +102,9 @@ class DetailPage extends StatelessWidget {
 
     final bottomContentText = Text(
       lesson.content,
-      style: TextStyle(fontSize: 18.0),
+      style: TextStyle(fontSize: 16.0),
     );
+    
     final readButton = Container(
         padding: EdgeInsets.symmetric(vertical: 16.0),
         width: MediaQuery.of(context).size.width,
@@ -111,7 +112,7 @@ class DetailPage extends StatelessWidget {
           onPressed: () => {},
           color: Color.fromRGBO(58, 66, 86, 1.0),
           child:
-              Text("TAKE THIS LESSON", style: TextStyle(color: Colors.white)),
+              Text("Start Quiz", style: TextStyle(color: Colors.white)),
         ));
     final bottomContent = Container(
       width: MediaQuery.of(context).size.width,
