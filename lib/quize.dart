@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
+import 'game_page.dart';
 import 'profile.dart';
 import 'itembag.dart';
-import 'quize.dart';
 
-void main() => runApp(new GamePage());
+void main() => runApp(new QuizePage());
 
-class GamePage extends StatelessWidget {
+class QuizePage extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
-      title: 'SSRU GO GamePage',
+      title: 'SSRU GO QuizePage',
       theme: new ThemeData(primaryColor: Color.fromRGBO(58, 66, 86, 1.0)),
-      home: new ListPage(title: 'SSRU GO'),
+      home: new ListPage(title: 'GE Quize'),
     );
   }
 }
@@ -50,16 +50,16 @@ class _ListPageState extends State<ListPage> {
           children: <Widget>[
             IconButton(
               icon: Icon(Icons.home, color: Colors.white),
-              onPressed: () {},
-            ),
-            IconButton(
-              icon: Icon(Icons.school, color: Colors.white),
               onPressed: () {
                 Navigator.pushReplacement(
                     context,
                     MaterialPageRoute(
-                        builder: (BuildContext context) => QuizePage()));
+                        builder: (BuildContext context) => GamePage()));
               },
+            ),
+            IconButton(
+              icon: Icon(Icons.school, color: Colors.white),
+              onPressed: () {},
             ),
             IconButton(
               icon: Icon(Icons.business_center, color: Colors.white),
