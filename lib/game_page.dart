@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'chat.dart';
 import 'profile.dart';
 import 'itembag.dart';
 import 'quize.dart';
@@ -35,8 +36,13 @@ class _ListPageState extends State<ListPage> {
       title: Text(widget.title),
       actions: <Widget>[
         IconButton(
-          icon: Icon(Icons.list),
-          onPressed: () {},
+          icon: Icon(Icons.forum),
+          onPressed: () {
+            Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                        builder: (BuildContext context) => FriendlychatApp()));
+          },
         )
       ],
     );
@@ -58,7 +64,7 @@ class _ListPageState extends State<ListPage> {
                 Navigator.pushReplacement(
                     context,
                     MaterialPageRoute(
-                        builder: (BuildContext context) => QuizePage()));
+                        builder: (BuildContext context) => QuizPage()));
               },
             ),
             IconButton(

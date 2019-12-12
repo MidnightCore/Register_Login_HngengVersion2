@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'game_page.dart';
-import 'welcome.dart';
 import 'editnickname.dart';
-import 'itembag.dart';
 
 class ProfilePage extends StatefulWidget {
   @override
@@ -39,7 +37,7 @@ class _ProfilePageState extends State<ProfilePage> {
                         ])),
                 SizedBox(height: 40.0),
                 Text(
-                  'John  Doe',
+                  'John Doe',
                   style: TextStyle(
                       fontSize: 30.0,
                       fontWeight: FontWeight.bold,
@@ -62,36 +60,7 @@ class _ProfilePageState extends State<ProfilePage> {
                       fontFamily: 'Montserrat'),
                 ),
                 SizedBox(height: 25.0),
-                Container(
-                  height: 45.0,
-                  width: 300.0,
-                  color: Colors.transparent,
-                  child: Container(
-                    decoration: BoxDecoration(
-                        border: Border.all(
-                            color: Colors.teal[700],
-                            style: BorderStyle.solid,
-                            width: 1.0),
-                        color: Colors.transparent,
-                        borderRadius: BorderRadius.circular(20.0)),
-                    child: InkWell(
-                      onTap: () {
-                        Navigator.pushReplacement(
-                            context,
-                            MaterialPageRoute(
-                                builder: (BuildContext context) =>
-                                    GamePage()));
-                      },
-                      child: Center(
-                        child: Text('Game Page',
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontFamily: 'Montserrat')),
-                      ),
-                    ),
-                  ),
-                ),
-                SizedBox(height: 25.0),
+                
                 Container(
                   height: 45.0,
                   width: 300.0,
@@ -140,7 +109,7 @@ class _ProfilePageState extends State<ProfilePage> {
                             context,
                             MaterialPageRoute(
                                 builder: (BuildContext context) =>
-                                    WelcomePage()));
+                                    GamePage()));
                       },
                       child: Center(
                         child: Text('Go Back',

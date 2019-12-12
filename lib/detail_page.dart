@@ -1,8 +1,6 @@
-// import 'package:beautiful_list/model/lesson.dart';
 import 'package:flutter/material.dart';
-
-import 'game_page.dart';
 import 'model/lesson.dart';
+import 'quize.dart';
 
 class DetailPage extends StatelessWidget {
   final Lesson lesson;
@@ -34,7 +32,7 @@ class DetailPage extends StatelessWidget {
       children: <Widget>[
         SizedBox(height: 120.0),
         Icon(
-          Icons.directions_car,
+          Icons.chrome_reader_mode,
           color: Colors.white,
           size: 40.0,
         ),
@@ -94,7 +92,7 @@ class DetailPage extends StatelessWidget {
               Navigator.pushReplacement(
                     context,
                     MaterialPageRoute(
-                        builder: (BuildContext context) => GamePage()));
+                        builder: (BuildContext context) => QuizPage()));
             },
             child: Icon(Icons.arrow_back, color: Colors.white),
           ),
